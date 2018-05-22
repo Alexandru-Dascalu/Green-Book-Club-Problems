@@ -7,10 +7,8 @@ can be printed in any order.
 
 Examples:
 
-Input: mat[][] = {  {2, 1, 4, 3},
-                     {1, 2, 3, 2},  
-                    {3, 6, 2, 3},  
-                    {5, 2, 5, 3}  }
+Input: mat[][] = {  {2, 1, 4, 3},{1, 2, 3, 2},  
+                    {3, 6, 2, 3},  {5, 2, 5, 3}  }
                    
 Output: 2 3
 
