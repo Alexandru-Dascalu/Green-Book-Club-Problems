@@ -8,10 +8,9 @@ equal to a given value x.
 Example:
 
 Input: Sum = 13 
-      (5) 
-      / \ 
-    (7)(10) 
-    /   / \ 
- (6)  (2) (1) 
+           5
+          / \
+         7  10
+    
  
  Output: Tree(7), Tree(10), Count = 2
