@@ -7,6 +7,7 @@ serialization/deserialization algorithm should work. You just need to ensure tha
 to a string and this string can be deserialized to the original tree structure. For example, you may serialize the following tree:
    
 1- parent of 2 and 3.
+
 3- parent of 4 and 5.
   
 as [1,2,3,null,null,4,5] .
