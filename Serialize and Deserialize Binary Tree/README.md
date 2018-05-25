@@ -6,8 +6,7 @@ environment. Design an algorithm to serialize and deserialize a binary tree. The
 serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized 
 to a string and this string can be deserialized to the original tree structure. For example, you may serialize the following tree:
    
-    1
-   / \\
-  2   3
+1- parent of 2 and 3.
+3- parent of 4 and 5.
   
-  as [1,2,3] .
+as [1,2,3,null,null,4,5] .
