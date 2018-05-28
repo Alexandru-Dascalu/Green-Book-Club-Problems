@@ -31,8 +31,8 @@ public class RotateMatrix
 		}
 		System.out.println();
 				
-		//2 variables used for swapping
-		int temp1, temp2;
+		//variable used for swapping
+		int temp;
 		
 		//the biggest index in the matrix is one less than the length
 		int maxIndex=squareMatrix.length-1;
@@ -40,25 +40,30 @@ public class RotateMatrix
 		/*We rotate the matrix by rotating concentric square layers inside it, 
 		 *starting from the outer one toward the inside, hence the loop will repeat
 		 *length/2 times*/
-		for(int i=0;i<(squareMatrix.length)/2;i++)
+		for(int i=0;i<squareMatrix.length/2;i++)
 		{
-			/*We rotate each square layer by starting from a number in the left
-			 * part of the layer, moving it to its new place and saving the previous
-			 * value to temp, moving that value to its new position, until we repeat 
-			 * the process 4 times. Then, we execute the loop again ad start from the
-			 * element that is directly down.*/
+			/*We rotate each square layer by swapping groups of 4 values, on in the leftmost column, on
+			 * in the rightmost column, on in the bottom row and one in the top row, who could form a 
+			 * rectangle between them. We start from a number in the left column part of the layer, 
+			 * moving it to the bottom row and saving the previous value to temp, then replace left 
+			 * with the value from the top row  ,then replace the top row value with the value from 
+			 * the left column, which is finally replaced by the value that was saved in temp. Then, 
+			 * we execute the loop again a d start from the element that is directly down from where
+			 * we last started.*/
 			for(int j=i;j<squareMatrix.length-i-1;j++)
 			{
-				temp1=squareMatrix[maxIndex-i][j];
+				//put left column value in bottom row and save the old value in temp
+				temp=squareMatrix[maxIndex-i][j];
 				squareMatrix[maxIndex-i][j]=squareMatrix[j][i];
 				
-				temp2=squareMatrix[maxIndex-j][maxIndex-i];
-				squareMatrix[maxIndex-j][maxIndex-i]=temp1;
+				//put top row value in left column
+				squareMatrix[j][i]=squareMatrix[i][maxIndex-j];
 				
-				temp1=squareMatrix[i][maxIndex-j];
-				squareMatrix[i][maxIndex-j]=temp2;
+				//put right column value in top row
+				squareMatrix[i][maxIndex-j]=squareMatrix[maxIndex-j][maxIndex-i];
 				
-				squareMatrix[j][i]=temp1;
+				//put the value saved earlier in right column
+				squareMatrix[maxIndex-j][maxIndex-i]=temp;
 			}
 		}
 		
