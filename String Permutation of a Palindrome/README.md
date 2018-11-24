@@ -5,7 +5,9 @@ rearranged such that they will form a palindrome.
 Examples:
 
 Input: aab
+
 Output: true
 
 Input: llah
+
 Output: false
