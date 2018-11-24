@@ -12,11 +12,11 @@ public class StringPotentialPalindrome
 	{
 		String someString="llkandfkal";
 		System.out.println("The string is: "+ someString);
-		System.out.println("Is it a permutation of a palindrome?"+canBeAPalindrome(someString));
+		System.out.println("Is it a permutation of a palindrome? "+canBeAPalindrome(someString));
 		
 		someString = "geeksogeeks";
 		System.out.println("The string is: "+ someString);
-		System.out.println("Is it a permutation of a palindrome?"+canBeAPalindrome(someString));
+		System.out.println("Is it a permutation of a palindrome? "+canBeAPalindrome(someString));
 	}
 	
 	private static boolean canBeAPalindrome(String someString)
