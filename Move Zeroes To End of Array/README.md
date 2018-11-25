@@ -1,6 +1,7 @@
 Problem:
 
-Given an array of random numbers, Push all the zero’s of a given array to the end of the array.
+Given an array of random numbers, Push all the zero’s of a given array to the end of the array. My solution is O(n) in runtime
+complexity and O(1) in space complexity.
 
 Example:
 
